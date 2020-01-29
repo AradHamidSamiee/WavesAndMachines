@@ -1,0 +1,268 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://world_test_v03/Menu_test_v01.gd" type="Script" id=1]
+[ext_resource path="res://world_test_v03/menu/pressanimation/Frame001.png" type="Texture" id=2]
+[ext_resource path="res://world_test_v03/menu/pressanimation/Frame002.png" type="Texture" id=3]
+[ext_resource path="res://world_test_v03/menu/pressanimation/Frame003.png" type="Texture" id=4]
+[ext_resource path="res://world_test_v03/menu/pressanimation/Frame004.png" type="Texture" id=5]
+[ext_resource path="res://world_test_v03/menu/pressanimation/Frame005.png" type="Texture" id=6]
+[ext_resource path="res://world_test_v03/menu/openninganimation/Frame003.png" type="Texture" id=7]
+[ext_resource path="res://world_test_v03/menu/openninganimation/Frame001.png" type="Texture" id=8]
+[ext_resource path="res://world_test_v03/menu/openninganimation/Frame002.png" type="Texture" id=9]
+[ext_resource path="res://world_test_v03/menu/charselection/charselection2.png" type="Texture" id=10]
+[ext_resource path="res://world_test_v03/menu/btn/newrole_selected.png" type="Texture" id=11]
+[ext_resource path="res://world_test_v03/menu/btn/load_selected.png" type="Texture" id=12]
+[ext_resource path="res://world_test_v03/menu/btn/close_selected.png" type="Texture" id=13]
+[ext_resource path="res://world_test_v03/menu/select button.png" type="Texture" id=14]
+[ext_resource path="res://world_test_v03/menu/btn/char1_selected.png" type="Texture" id=15]
+[ext_resource path="res://world_test_v03/assets/fonts/pixel_font/PressStart2P-Regular.ttf" type="DynamicFontData" id=16]
+[ext_resource path="res://world_test_v03/menu/btn/char2_selected.png" type="Texture" id=17]
+[ext_resource path="res://world_test_v03/menu/btn/char3_selected.png" type="Texture" id=18]
+[ext_resource path="res://world_test_v03/menu/select pics maybe.png" type="Texture" id=19]
+[ext_resource path="res://world_test_v03/assets/shadow overlay.png" type="Texture" id=20]
+[ext_resource path="res://world_test_v03/fadein_effect_ColorRect.tscn" type="PackedScene" id=21]
+[ext_resource path="res://world_test_v03/metavision_effect.tscn" type="PackedScene" id=22]
+[ext_resource path="res://world_test_v03/fps_showcase.tscn" type="PackedScene" id=23]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "start",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "menu",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 7 ) ],
+"loop": false,
+"name": "opening",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "closing",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": false,
+"name": "charselection",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_top = 4
+extra_spacing_space = -15
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 16 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 16 )
+
+[node name="TitleScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="position_handler" type="Node2D" parent="."]
+position = Vector2( 100, 0 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="position_handler"]
+position = Vector2( 190, 0 )
+frames = SubResource( 1 )
+animation = "menu"
+centered = false
+
+[node name="sprite_to_hold_buttons" type="Sprite" parent="position_handler/AnimatedSprite"]
+position = Vector2( 450, 300 )
+texture = ExtResource( 7 )
+
+[node name="NewGame" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_buttons"]
+margin_left = -213.0
+margin_top = -171.0
+margin_right = -93.0
+margin_bottom = -126.0
+texture_hover = ExtResource( 11 )
+texture_focused = ExtResource( 11 )
+
+[node name="Load" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_buttons"]
+margin_left = -219.0
+margin_top = -132.0
+margin_right = -129.0
+margin_bottom = -78.0
+texture_hover = ExtResource( 12 )
+texture_focused = ExtResource( 12 )
+
+[node name="Close" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_buttons"]
+margin_left = -201.0
+margin_top = -99.0
+margin_right = -111.0
+margin_bottom = -45.0
+texture_hover = ExtResource( 13 )
+texture_focused = ExtResource( 13 )
+
+[node name="button_select_controller" type="Sprite" parent="position_handler/AnimatedSprite/sprite_to_hold_buttons"]
+position = Vector2( -150, -165 )
+rotation = 0.349066
+texture = ExtResource( 14 )
+
+[node name="sprite_to_hold_chars" type="Sprite" parent="position_handler/AnimatedSprite"]
+position = Vector2( 450, 300 )
+texture = ExtResource( 10 )
+
+[node name="hero" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_chars"]
+margin_left = 66.0
+margin_top = -219.0
+margin_right = 315.0
+margin_bottom = -36.0
+texture_hover = ExtResource( 15 )
+
+[node name="hero_status" type="Label" parent="position_handler/AnimatedSprite/sprite_to_hold_chars/hero"]
+margin_left = 120.0
+margin_top = 35.0
+margin_right = 288.0
+margin_bottom = 162.0
+rect_rotation = 19.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "STATS
+
+birth: 1991
+health: 30
+wallet: 800"
+
+[node name="kat" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_chars"]
+margin_left = 33.0
+margin_top = -90.0
+margin_right = 282.0
+margin_bottom = 93.0
+texture_hover = ExtResource( 17 )
+
+[node name="kat_status" type="Label" parent="position_handler/AnimatedSprite/sprite_to_hold_chars/kat"]
+margin_left = 120.0
+margin_top = 41.0
+margin_right = 288.0
+margin_bottom = 168.0
+rect_rotation = 19.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "STATS
+
+birth: 1991
+health: 40
+wallet: 200"
+
+[node name="no_pic" type="Label" parent="position_handler/AnimatedSprite/sprite_to_hold_chars/kat"]
+margin_left = 52.0
+margin_top = 30.0
+margin_right = 112.0
+margin_bottom = 90.0
+rect_rotation = 19.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "?"
+
+[node name="costum" type="TextureButton" parent="position_handler/AnimatedSprite/sprite_to_hold_chars"]
+margin_left = -3.0
+margin_top = 36.0
+margin_right = 246.0
+margin_bottom = 219.0
+texture_hover = ExtResource( 18 )
+
+[node name="costum_status" type="Label" parent="position_handler/AnimatedSprite/sprite_to_hold_chars/costum"]
+margin_left = 123.0
+margin_top = 43.0
+margin_right = 291.0
+margin_bottom = 170.0
+rect_rotation = 19.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "STATS
+
+birth: ???
+health: ??
+wallet: ??"
+
+[node name="no_pic2" type="Label" parent="position_handler/AnimatedSprite/sprite_to_hold_chars/costum"]
+margin_left = 52.0
+margin_top = 30.0
+margin_right = 112.0
+margin_bottom = 90.0
+rect_rotation = 19.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "?"
+
+[node name="char_select_controller" type="Sprite" parent="position_handler/AnimatedSprite/sprite_to_hold_chars"]
+position = Vector2( 130, -100 )
+rotation = 0.663225
+texture = ExtResource( 19 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="view_ratio" type="Sprite" parent="."]
+position = Vector2( 800, 310 )
+scale = Vector2( 1.5, 1 )
+texture = ExtResource( 20 )
+
+[node name="about_RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 40.0
+margin_top = 220.0
+margin_right = 260.0
+margin_bottom = 520.0
+focus_mode = 2
+custom_fonts/normal_font = SubResource( 4 )
+custom_colors/default_color = Color( 0, 1, 1, 1 )
+custom_colors/selection_color = Color( 1, 0.996078, 0, 1 )
+custom_colors/font_color_shadow = Color( 1, 0, 0.988235, 1 )
+bbcode_enabled = true
+bbcode_text = "version 0.2.0
+
+MetaVision games
+
+(product is under MIT licence, so make sure to credit)
+
+check me out on social media uwu
+
+instagram: metavisiongames
+
+direct me all your beautiful ideas
+
+website: [url=http://metavision.mygamesonline.org/]http://metavision.mygamesonline.org/[/url]"
+text = "version 0.2.0
+
+MetaVision games
+
+(product is under MIT licence, so make sure to credit)
+
+check me out on social media uwu
+
+instagram: metavisiongames
+
+direct me all your beautiful ideas
+
+website: http://metavision.mygamesonline.org/"
+selection_enabled = true
+
+[node name="fadein_effect_ColorRect" parent="." instance=ExtResource( 21 )]
+visible = false
+
+[node name="metavision_effect" parent="." instance=ExtResource( 22 )]
+visible = false
+position = Vector2( 775, 380 )
+
+[node name="fps_label" parent="." instance=ExtResource( 23 )]
+margin_bottom = 36.0
+[connection signal="pressed" from="position_handler/AnimatedSprite/sprite_to_hold_buttons/NewGame" to="." method="_on_NewGame_pressed"]
+[connection signal="pressed" from="position_handler/AnimatedSprite/sprite_to_hold_buttons/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="position_handler/AnimatedSprite/sprite_to_hold_buttons/Close" to="." method="_on_Close_pressed"]
+[connection signal="pressed" from="position_handler/AnimatedSprite/sprite_to_hold_chars/hero" to="." method="_on_hero_pressed"]
+[connection signal="fadein_finished" from="fadein_effect_ColorRect" to="." method="_on_fadein_effect_ColorRect_fadein_finished"]
+[connection signal="metavision_effect_finished" from="metavision_effect" to="." method="_on_metavision_effect_metavision_effect_finished"]

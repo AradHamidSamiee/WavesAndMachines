@@ -1,0 +1,226 @@
+[gd_scene load_steps=48 format=2]
+
+[ext_resource path="res://city_test_002/hero_002.gd" type="Script" id=1]
+[ext_resource path="res://world_test_v03/assets/flashlight_005.png" type="Texture" id=2]
+[ext_resource path="res://world_test_v03/assets/lantern.png" type="Texture" id=3]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/smartphone_off.png" type="Texture" id=4]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/animated/Frame001.png" type="Texture" id=5]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/animated/Frame002.png" type="Texture" id=6]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/animated/Frame003.png" type="Texture" id=7]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/animated/Frame004.png" type="Texture" id=8]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/math_resized.png" type="Texture" id=9]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/math_selected_resized.png" type="Texture" id=10]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/date_resized.png" type="Texture" id=11]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/date_selected_resized.png" type="Texture" id=12]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/dimdim_resized.png" type="Texture" id=13]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/dimdim_selected_resized.png" type="Texture" id=14]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/text_resized.png" type="Texture" id=15]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/text_selected_resized.png" type="Texture" id=16]
+[ext_resource path="res://world_test_v03/local_time_display.gd" type="Script" id=17]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/ms_list2.png" type="Texture" id=18]
+[ext_resource path="res://world_test_v03/assets/props/smartphone/buttons_resized/selected_ms.png" type="Texture" id=19]
+[ext_resource path="res://world_test_v03/fps_showcase.tscn" type="PackedScene" id=20]
+[ext_resource path="res://world_test_v03/player_status.tscn" type="PackedScene" id=21]
+[ext_resource path="res://world_test_v03/Dialogue_Box_02.tscn" type="PackedScene" id=22]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_behind/Frame001.png" type="Texture" id=23]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_behind/Frame002.png" type="Texture" id=24]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_behind/Frame003.png" type="Texture" id=25]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_behind/Frame004.png" type="Texture" id=26]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_front/Frame001.png" type="Texture" id=27]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_front/Frame002.png" type="Texture" id=28]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_front/Frame003.png" type="Texture" id=29]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_front/Frame004.png" type="Texture" id=30]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_front/Frame005.png" type="Texture" id=31]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_front/Frame001.png" type="Texture" id=32]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_front/Frame002.png" type="Texture" id=33]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_front/Frame003.png" type="Texture" id=34]
+[ext_resource path="res://city_test_002/animations/Hero_Walk_front/Frame004.png" type="Texture" id=35]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_behind/Frame001.png" type="Texture" id=36]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_behind/Frame002.png" type="Texture" id=37]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_behind/Frame003.png" type="Texture" id=38]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_behind/Frame004.png" type="Texture" id=39]
+[ext_resource path="res://city_test_002/animations/Hero_Idle_behind/Frame005.png" type="Texture" id=40]
+[ext_resource path="res://city_test_002/assets/shadow overlay.png" type="Texture" id=41]
+[ext_resource path="res://world_test_v03/assets/props/thoughts_panel/thoughts_panel_v001.png" type="Texture" id=42]
+[ext_resource path="res://world_test_v03/assets/fonts/pixel_font/PressStart2P-Regular.ttf" type="DynamicFontData" id=43]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": false,
+"name": "smartphone_turningon",
+"speed": 30.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "smartphone_turningoff",
+"speed": 30.0
+} ]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "anim_hero_walk_behind",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "anim_hero_idle_front",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "anim_hero_walk_front",
+"speed": 7.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "anim_hero_idle_behind",
+"speed": 7.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21.1983, 10 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 10
+use_filter = true
+font_data = ExtResource( 43 )
+
+[node name="hero_002" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="lantern" type="Sprite" parent="."]
+position = Vector2( 0, 100 )
+rotation = 3.14159
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="lantern"]
+texture = ExtResource( 3 )
+color = Color( 0, 1, 0.858824, 1 )
+shadow_enabled = true
+
+[node name="CL" type="CanvasLayer" parent="."]
+
+[node name="UI_SmartphonePanel" type="Sprite" parent="CL"]
+position = Vector2( 1300, 700 )
+texture = ExtResource( 4 )
+
+[node name="AnimatedSprite_Smartphone" type="AnimatedSprite" parent="CL/UI_SmartphonePanel"]
+frames = SubResource( 1 )
+animation = "New Anim"
+
+[node name="calculator" type="TextureButton" parent="CL/UI_SmartphonePanel"]
+margin_left = -80.0
+margin_top = -105.0
+margin_right = -23.0
+margin_bottom = -42.0
+texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 10 )
+
+[node name="date" type="TextureButton" parent="CL/UI_SmartphonePanel"]
+margin_left = 20.0
+margin_top = -105.0
+margin_right = 77.0
+margin_bottom = -39.0
+texture_normal = ExtResource( 11 )
+texture_hover = ExtResource( 12 )
+
+[node name="musica" type="TextureButton" parent="CL/UI_SmartphonePanel"]
+margin_left = -90.0
+margin_top = -10.0
+margin_bottom = 56.0
+texture_normal = ExtResource( 13 )
+texture_hover = ExtResource( 14 )
+
+[node name="texter" type="TextureButton" parent="CL/UI_SmartphonePanel"]
+margin_left = 20.0
+margin_top = -10.0
+margin_right = 77.0
+margin_bottom = 56.0
+texture_normal = ExtResource( 15 )
+texture_hover = ExtResource( 16 )
+
+[node name="local_time_display" type="RichTextLabel" parent="CL/UI_SmartphonePanel"]
+margin_left = -30.0
+margin_top = -155.0
+margin_right = 37.0
+margin_bottom = -142.0
+rect_scale = Vector2( 1.2, 1.5 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+text = "local time"
+scroll_active = false
+script = ExtResource( 17 )
+
+[node name="Timer" type="Timer" parent="CL/UI_SmartphonePanel/local_time_display"]
+
+[node name="calculator_selected" type="Sprite" parent="CL/UI_SmartphonePanel"]
+position = Vector2( -51.5, -74 )
+texture = ExtResource( 10 )
+
+[node name="date_selected" type="Sprite" parent="CL/UI_SmartphonePanel"]
+position = Vector2( 48.5, -72 )
+texture = ExtResource( 12 )
+
+[node name="musica_selected" type="Sprite" parent="CL/UI_SmartphonePanel"]
+position = Vector2( -45, 23 )
+texture = ExtResource( 14 )
+
+[node name="texter_selected" type="Sprite" parent="CL/UI_SmartphonePanel"]
+position = Vector2( 48.5, 23 )
+texture = ExtResource( 16 )
+
+[node name="texter_display" type="Sprite" parent="CL/UI_SmartphonePanel"]
+visible = false
+texture = ExtResource( 18 )
+
+[node name="selected_message" type="Sprite" parent="CL/UI_SmartphonePanel/texter_display"]
+position = Vector2( -81, -124 )
+texture = ExtResource( 19 )
+
+[node name="fps_label" parent="CL" instance=ExtResource( 20 )]
+
+[node name="player_status" parent="CL" instance=ExtResource( 21 )]
+
+[node name="DialogueBox" parent="CL" instance=ExtResource( 22 )]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "New Anim"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 43.7414 )
+shape = SubResource( 3 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+smoothing_enabled = true
+
+[node name="view_ratio" type="Sprite" parent="Camera2D"]
+scale = Vector2( 1.7, 1.7 )
+texture = ExtResource( 41 )
+
+[node name="UI_ThoughtsPanel" type="Sprite" parent="."]
+position = Vector2( -120, -120 )
+texture = ExtResource( 42 )
+
+[node name="Label" type="Label" parent="UI_ThoughtsPanel"]
+margin_left = -80.0
+margin_top = -10.0
+margin_right = 210.0
+margin_bottom = 20.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "i need to find
+out where i am"
+[connection signal="pressed" from="CL/UI_SmartphonePanel/calculator" to="." method="_on_calculator_pressed"]
+[connection signal="pressed" from="CL/UI_SmartphonePanel/date" to="." method="_on_date_pressed"]
+[connection signal="pressed" from="CL/UI_SmartphonePanel/musica" to="." method="_on_musica_pressed"]
+[connection signal="pressed" from="CL/UI_SmartphonePanel/texter" to="." method="_on_texter_pressed"]

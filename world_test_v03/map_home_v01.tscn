@@ -1,0 +1,193 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://world_test_v03/assets/maps/room_hero_test_004.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 540, 20 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 210, 110 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 230, 80 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 49.2766, 154.773 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 79.8076, 49.0548 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 38.9683, 58.7959 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 161.964, 27.0883 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 123.105, 78.7886 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 10, 42.2722 )
+
+[node name="home" type="Node2D"]
+
+[node name="home_level_ground" type="Sprite" parent="."]
+position = Vector2( 1500, 1500 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="home_level_ground"]
+
+[node name="wall" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 260, 150 )
+shape = SubResource( 1 )
+
+[node name="wall2" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -60, -190 )
+shape = SubResource( 2 )
+
+[node name="wall31" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -121.053, -378.421 )
+shape = SubResource( 2 )
+
+[node name="wall35" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -137.049, -853.228 )
+shape = SubResource( 2 )
+
+[node name="wall3" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 685.568, -610 )
+shape = SubResource( 2 )
+
+[node name="wall4" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 590, -1010 )
+shape = SubResource( 2 )
+
+[node name="wall5" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -130, -800 )
+shape = SubResource( 3 )
+
+[node name="wall6" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -130, -1310 )
+shape = SubResource( 3 )
+
+[node name="wall7" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 287.849, -1146.77 )
+shape = SubResource( 3 )
+
+[node name="wall8" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 355.103, -949.747 )
+shape = SubResource( 4 )
+
+[node name="wall9" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 353.725, -565.668 )
+shape = SubResource( 4 )
+
+[node name="wall10" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 353.426, -279.25 )
+shape = SubResource( 4 )
+
+[node name="wall11" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 108.075, -719.863 )
+shape = SubResource( 4 )
+
+[node name="wall12" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 108.471, -841.374 )
+shape = SubResource( 4 )
+
+[node name="wall29" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -369.111, -594.005 )
+shape = SubResource( 4 )
+
+[node name="wall30" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 104.573, -331.9 )
+shape = SubResource( 4 )
+
+[node name="wall13" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 13.7997, -755.478 )
+shape = SubResource( 4 )
+
+[node name="wall14" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -227.257, -1252.88 )
+shape = SubResource( 4 )
+
+[node name="wall15" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -256.945, -53.7799 )
+shape = SubResource( 4 )
+
+[node name="wall37" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 831.056, 10.2201 )
+shape = SubResource( 4 )
+
+[node name="wall36" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -360.51, -1090.47 )
+shape = SubResource( 4 )
+
+[node name="wall16" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -245.37, -712.727 )
+shape = SubResource( 5 )
+
+[node name="wall17" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -4.58606, -1209.69 )
+shape = SubResource( 5 )
+
+[node name="wall18" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -179.122, -1238.12 )
+shape = SubResource( 5 )
+
+[node name="wall19" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -352.702, -1240.96 )
+shape = SubResource( 5 )
+
+[node name="wall20" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 565.907, -505.375 )
+shape = SubResource( 5 )
+
+[node name="wall21" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 715.722, -513.588 )
+shape = SubResource( 5 )
+
+[node name="wall27" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 781.096, -443.781 )
+shape = SubResource( 5 )
+
+[node name="wall28" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 810.57, -838.519 )
+shape = SubResource( 5 )
+
+[node name="wall22" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 716.2, -776.88 )
+shape = SubResource( 5 )
+
+[node name="wall23" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 680.276, -914.274 )
+shape = SubResource( 5 )
+
+[node name="wall24" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 489.463, -917.399 )
+shape = SubResource( 6 )
+
+[node name="wall25" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 239.989, -1104.77 )
+shape = SubResource( 6 )
+
+[node name="wall26" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 561.105, -393.233 )
+shape = SubResource( 7 )
+
+[node name="wall32" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 522.593, -203.081 )
+shape = SubResource( 8 )
+
+[node name="wall33" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 847.369, -204.21 )
+shape = SubResource( 8 )
+
+[node name="wall34" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( 693.506, -270.798 )
+shape = SubResource( 8 )
+
+[node name="wall39" type="CollisionShape2D" parent="home_level_ground/StaticBody2D"]
+position = Vector2( -266.238, 115.52 )
+shape = SubResource( 9 )
